@@ -39,60 +39,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission using Web3Forms
+// Form submission (ready for integration)
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
-
-// IMPORTANT: Replace this with your actual Web3Forms Access Key
-// Get it free at: https://web3forms.com
-const WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY_HERE';
 
 contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     
-    const formData = new FormData(contactForm);
-    const phone = formData.get('phone');
-    
-    // Build the data object
-    const data = {
-        access_key: WEB3FORMS_ACCESS_KEY,
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: phone || 'Not provided',
-        message: formData.get('message'),
-        from_name: "Omni Seq Website Contact Form"
-    };
-
     // Show loading state
     formStatus.classList.remove('hidden');
-    formStatus.innerHTML = '<p class="text-gray-400 animate-pulse">Sending message...</p>';
+    formStatus.innerHTML = '<p class="text-gray-400 animate-pulse">Processing...</p>';
 
-    try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-
-        const result = await response.json();
-
-        if (result.success) {
-            formStatus.innerHTML = '<p class="text-green-400 font-semibold">✓ Message sent successfully! We\'ll get back to you soon.</p>';
-            contactForm.reset();
-            
-            setTimeout(() => {
-                formStatus.classList.add('hidden');
-            }, 5000);
-        } else {
-            throw new Error(result.message || 'Failed to send');
-        }
-    } catch (error) {
-        console.error('Form submission error:', error);
-        formStatus.innerHTML = '<p class="text-red-400">✗ Failed to send message. Please try again or email us directly.</p>';
-    }
+    // Temporary demo - form will be connected to email service later
+    setTimeout(() => {
+        formStatus.innerHTML = '<p class="text-green-400 font-semibold">✓ Form submitted! (Email integration pending)</p>';
+        contactForm.reset();
+        
+        setTimeout(() => {
+            formStatus.classList.add('hidden');
+        }, 5000);
+    }, 1000);
 });
 
 // Add animation on scroll
