@@ -972,10 +972,20 @@
     
     <!-- Mission, Vision, Values Section -->
     <section class="py-20 bg-slate-800 relative overflow-hidden">
-        <!-- Animated background grid -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute inset-0" style="background-image: linear-gradient(rgba(14, 165, 233, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.3) 1px, transparent 1px); background-size: 50px 50px;"></div>
+        <!-- Animated background grid (like services) -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <div class="grid-background"></div>
         </div>
+        
+        <!-- Floating geometric shapes -->
+        <div class="floating-shape" style="top: 10%; left: 5%; width: 100px; height: 100px; animation-delay: 0s;"></div>
+        <div class="floating-shape" style="top: 70%; right: 10%; width: 80px; height: 80px; animation-delay: 2s;"></div>
+        <div class="floating-shape" style="bottom: 20%; left: 15%; width: 60px; height: 60px; animation-delay: 4s;"></div>
+        
+        <!-- Cyber particles -->
+        <div class="cyber-particle" style="top: 25%; left: 20%; animation-delay: 0s;"></div>
+        <div class="cyber-particle" style="top: 65%; right: 25%; animation-delay: 3s;"></div>
+        <div class="cyber-particle" style="bottom: 30%; left: 40%; animation-delay: 1.5s;"></div>
         
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-6xl mx-auto">
@@ -1015,7 +1025,7 @@
                             <h3 class="text-2xl font-bold gradient-text">Our Vision</h3>
                         </div>
                         <p class="text-gray-300 leading-relaxed">
-                            To be South Asia's most trusted cybersecurity partner, empowering businesses to innovate fearlessly in a secure digital landscape.
+                            South Asia's most trusted cybersecurity partner for fearless innovation.
                         </p>
                     </div>
                     
@@ -1030,7 +1040,7 @@
                             <h3 class="text-2xl font-bold gradient-text">Our Values</h3>
                         </div>
                         <p class="text-gray-300 leading-relaxed">
-                            Excellence, integrity, and innovation drive every security solution we deliver. We prioritize client trust and continuous improvement.
+                            Excellence, integrity, and innovation in every security solution we deliver.
                         </p>
                     </div>
                 </div>
