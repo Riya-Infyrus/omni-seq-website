@@ -41,9 +41,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // EmailJS Configuration
 // Get your credentials from: https://dashboard.emailjs.com/
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY_HERE';  // Replace with your EmailJS Public Key
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID_HERE';  // Replace with your Service ID (e.g., 'service_abc123')
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID_HERE'; // Replace with your Template ID (e.g., 'template_xyz456')
+const EMAILJS_PUBLIC_KEY = 'wx1rAvmASbsMP-kdf';  // Replace with your EmailJS Public Key
+const EMAILJS_SERVICE_ID = 'service_wa1cq3q';  // Replace with your Service ID (e.g., 'service_abc123')
+const EMAILJS_TEMPLATE_ID = 'template_pk3b9nq'; // Replace with your Template ID (e.g., 'template_xyz456')
 
 // Initialize EmailJS
 emailjs.init(EMAILJS_PUBLIC_KEY);
