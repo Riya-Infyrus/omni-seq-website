@@ -1,4 +1,3 @@
-// Navbar scroll effect
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
     if (window.scrollY > 50) {
@@ -8,7 +7,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -16,7 +14,6 @@ mobileMenuBtn.addEventListener('click', function() {
     mobileMenu.classList.toggle('hidden');
 });
 
-// Close mobile menu when clicking a link
 const mobileLinks = mobileMenu.querySelectorAll('a');
 mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -24,7 +21,6 @@ mobileLinks.forEach(link => {
     });
 });
 
-// Typing effect for hero text
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.textContent = '';
@@ -35,7 +31,6 @@ function typeWriter(element, text, speed = 100) {
             i++;
             setTimeout(type, speed);
         } else {
-            // Add blinking cursor after typing is done
             element.style.borderRight = '3px solid rgba(14, 165, 233, 0.8)';
             element.style.paddingRight = '4px';
             element.style.animation = 'blink 0.75s step-end infinite';
@@ -44,7 +39,6 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Start typing effect when page loads
 window.addEventListener('load', function() {
     const typingElement = document.querySelector('.typing-text');
     if (typingElement) {
@@ -53,7 +47,6 @@ window.addEventListener('load', function() {
     }
 });
 
-// Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -68,27 +61,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// EmailJS Configuration
-// Get your credentials from: https://dashboard.emailjs.com/
-const EMAILJS_PUBLIC_KEY = 'wx1rAvmASbsMP-kdf';  // Replace with your EmailJS Public Key
-const EMAILJS_SERVICE_ID = 'service_mj8y8yb';  // Replace with your Service ID (e.g., 'service_abc123')
-const EMAILJS_TEMPLATE_ID = 'template_pk3b9nq'; // Replace with your Template ID (e.g., 'template_xyz456')
+const EMAILJS_PUBLIC_KEY = 'wx1rAvmASbsMP-kdf';
+const EMAILJS_SERVICE_ID = 'service_mj8y8yb';
+const EMAILJS_TEMPLATE_ID = 'template_pk3b9nq';
 
-// Initialize EmailJS
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
-// Form submission with EmailJS
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
 
 contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     
-    // Show loading state
     formStatus.classList.remove('hidden');
     formStatus.innerHTML = '<p class="text-gray-400 animate-pulse">Sending message...</p>';
 
-    // Get form data
     const formData = {
         from_name: document.getElementById('name').value,
         from_email: document.getElementById('email').value,
@@ -98,7 +85,6 @@ contactForm.addEventListener('submit', async function(e) {
     };
 
     try {
-        // Send email using EmailJS
         const response = await emailjs.send(
             EMAILJS_SERVICE_ID,
             EMAILJS_TEMPLATE_ID,
@@ -122,7 +108,6 @@ contactForm.addEventListener('submit', async function(e) {
     }
 });
 
-// Add animation on scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -137,7 +122,6 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Observe service cards
 document.querySelectorAll('.card-hover').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
