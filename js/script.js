@@ -39,7 +39,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission (ready for integration)
+// EmailJS Configuration
+// Get your credentials from: https://dashboard.emailjs.com/
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY_HERE';  // Replace with your EmailJS Public Key
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID_HERE';  // Replace with your Service ID (e.g., 'service_abc123')
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID_HERE'; // Replace with your Template ID (e.g., 'template_xyz456')
+
+// Initialize EmailJS
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
+// Form submission with EmailJS
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
 
@@ -48,17 +57,40 @@ contactForm.addEventListener('submit', async function(e) {
     
     // Show loading state
     formStatus.classList.remove('hidden');
-    formStatus.innerHTML = '<p class="text-gray-400 animate-pulse">Processing...</p>';
+    formStatus.innerHTML = '<p class="text-gray-400 animate-pulse">Sending message...</p>';
 
-    // Temporary demo - form will be connected to email service later
-    setTimeout(() => {
-        formStatus.innerHTML = '<p class="text-green-400 font-semibold">✓ Form submitted! (Email integration pending)</p>';
+    // Get form data
+    const formData = {
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value || 'Not provided',
+        message: document.getElementById('message').value,
+        to_name: 'Omni Seq Team'
+    };
+
+    try {
+        // Send email using EmailJS
+        const response = await emailjs.send(
+            EMAILJS_SERVICE_ID,
+            EMAILJS_TEMPLATE_ID,
+            formData
+        );
+
+        console.log('SUCCESS!', response.status, response.text);
+        formStatus.innerHTML = '<p class="text-green-400 font-semibold">✓ Message sent successfully! We\'ll get back to you soon.</p>';
         contactForm.reset();
         
         setTimeout(() => {
             formStatus.classList.add('hidden');
         }, 5000);
-    }, 1000);
+    } catch (error) {
+        console.error('FAILED...', error);
+        formStatus.innerHTML = '<p class="text-red-400 font-semibold">✗ Failed to send message. Please try again or email us directly at info@omniseq.com.np</p>';
+        
+        setTimeout(() => {
+            formStatus.classList.add('hidden');
+        }, 7000);
+    }
 });
 
 // Add animation on scroll
