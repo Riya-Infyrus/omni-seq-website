@@ -24,6 +24,35 @@ mobileLinks.forEach(link => {
     });
 });
 
+// Typing effect for hero text
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.textContent = '';
+    
+    function type() {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        } else {
+            // Add blinking cursor after typing is done
+            element.style.borderRight = '3px solid rgba(14, 165, 233, 0.8)';
+            element.style.paddingRight = '8px';
+            element.style.animation = 'blink 0.75s step-end infinite';
+        }
+    }
+    type();
+}
+
+// Start typing effect when page loads
+window.addEventListener('load', function() {
+    const typingElement = document.querySelector('.typing-text');
+    if (typingElement) {
+        const text = typingElement.textContent;
+        typeWriter(typingElement, text, 80);
+    }
+});
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
