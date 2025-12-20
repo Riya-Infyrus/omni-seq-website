@@ -441,84 +441,52 @@
                     </p>
                 </div>
                 
-                <!-- About Content -->
-                <div class="mb-10">
-                    <div class="max-w-3xl mx-auto">
-                        <div class="relative">
-                            <div class="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-primary/50 via-cyan-500/50 to-primary/50 hidden md:block"></div>
-                            
-                            <p class="text-gray-300 text-xl leading-relaxed text-center mb-8">
+                <!-- About Content with CEO Message Side by Side -->
+                <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <!-- Left: About Text -->
+                    <div class="flex items-center">
+                        <div class="ceo-card p-8 h-full flex items-center">
+                            <p class="text-gray-300 text-lg leading-relaxed">
                                 <span class="text-primary font-semibold">Omni Seq</span> combines global-standard security practices with deep local expertise to protect Nepal's digital infrastructure across banking, healthcare, and government sectors.
                             </p>
                         </div>
                     </div>
-                </div>
-                
-                <!-- CEO Message Merged -->
-                <div class="max-w-4xl mx-auto mb-10">
-                    <div class="ceo-card p-8 md:p-10">
-                        <div class="flex flex-col md:flex-row gap-8 items-start">
-                            <!-- CEO Avatar -->
-                            <div class="flex-shrink-0 mx-auto md:mx-0">
-                                <div class="relative">
-                                    <div class="w-24 h-24 md:w-28 md:h-28 bg-gradient-to-br from-primary/30 to-cyan-500/30 flex items-center justify-center relative overflow-hidden">
-                                        <span class="text-4xl font-bold text-primary relative z-10">MA</span>
-                                        <div class="absolute inset-0 border-2 border-primary opacity-50 animate-pulse"></div>
+                    
+                    <!-- Right: CEO Message -->
+                    <div>
+                        <div class="ceo-card p-8 h-full">
+                            <div class="flex flex-col h-full">
+                                <!-- CEO Avatar -->
+                                <div class="flex items-start gap-6 mb-4">
+                                    <div class="flex-shrink-0">
+                                        <div class="relative">
+                                            <div class="w-20 h-20 bg-gradient-to-br from-primary/30 to-cyan-500/30 flex items-center justify-center relative overflow-hidden">
+                                                <span class="text-3xl font-bold text-primary relative z-10">MA</span>
+                                                <div class="absolute inset-0 border-2 border-primary opacity-50 animate-pulse"></div>
+                                            </div>
+                                            <div class="absolute -top-1 -left-1 w-5 h-5 border-t-2 border-l-2 border-primary"></div>
+                                            <div class="absolute -bottom-1 -right-1 w-5 h-5 border-b-2 border-r-2 border-primary"></div>
+                                        </div>
                                     </div>
-                                    <div class="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-primary"></div>
-                                    <div class="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-primary"></div>
+                                    
+                                    <div>
+                                        <svg class="w-6 h-6 text-primary/40 mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                            
-                            <!-- CEO Message -->
-                            <div class="flex-1">
-                                <svg class="w-8 h-8 text-primary/40 mb-3" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                                </svg>
-                                <blockquote class="text-base md:text-lg text-gray-200 leading-relaxed mb-4">
+                                
+                                <!-- CEO Quote -->
+                                <blockquote class="text-base text-gray-200 leading-relaxed mb-4 flex-1">
                                     "We're building the security backbone that allows South Asian enterprises to innovate fearlessly. Enterprise-grade cybersecurity is a competitive advantage, not a cost center."
                                 </blockquote>
+                                
+                                <!-- CEO Info -->
                                 <div class="border-t border-slate-700 pt-4">
-                                    <div class="font-bold text-lg text-white">Manjeevan Adhikari</div>
+                                    <div class="font-bold text-base text-white">Manjeevan Adhikari</div>
                                     <div class="text-primary text-sm font-medium">Founder & CEO, Omni Seq Pvt. Ltd.</div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Why Choose Us - Enhanced -->
-                <div>
-                    <h3 class="text-3xl font-bold text-center mb-6 gradient-text">Why Choose Us?</h3>
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <div class="value-card group">
-                            <div class="w-14 h-14 bg-primary/20 flex items-center justify-center mb-4 pulse-glow transition-transform group-hover:scale-110">
-                                <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h4 class="font-bold text-lg text-white mb-2">Global Standards, Local Expertise</h4>
-                            <p class="text-gray-400 text-sm">International best practices tailored for South Asian enterprises</p>
-                        </div>
-                        
-                        <div class="value-card group">
-                            <div class="w-14 h-14 bg-primary/20 flex items-center justify-center mb-4 pulse-glow transition-transform group-hover:scale-110">
-                                <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h4 class="font-bold text-lg text-white mb-2">24/7 Security Operations</h4>
-                            <p class="text-gray-400 text-sm">Round-the-clock monitoring and rapid threat response</p>
-                        </div>
-                        
-                        <div class="value-card group">
-                            <div class="w-14 h-14 bg-primary/20 flex items-center justify-center mb-4 pulse-glow transition-transform group-hover:scale-110">
-                                <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                                </svg>
-                            </div>
-                            <h4 class="font-bold text-lg text-white mb-2">Certified Professionals</h4>
-                            <p class="text-gray-400 text-sm">Team of industry-certified cybersecurity experts</p>
                         </div>
                     </div>
                 </div>
@@ -557,7 +525,7 @@
                     <p class="text-gray-400 text-lg">The foundation of everything we do</p>
                 </div>
                 
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
                     <!-- Mission -->
                     <div class="value-card">
                         <div class="flex items-center mb-4">
@@ -602,6 +570,42 @@
                         <p class="text-gray-300 leading-relaxed">
                             Excellence, integrity, and innovation in every security solution we deliver.
                         </p>
+                    </div>
+                </div>
+                
+                <!-- Why Choose Us -->
+                <div class="mt-12">
+                    <h3 class="text-3xl font-bold text-center mb-8 gradient-text">Why Choose Us?</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="value-card group">
+                            <div class="w-14 h-14 bg-primary/20 flex items-center justify-center mb-4 pulse-glow transition-transform group-hover:scale-110">
+                                <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-lg text-white mb-2">Global Standards, Local Expertise</h4>
+                            <p class="text-gray-400 text-sm">International best practices tailored for South Asian enterprises</p>
+                        </div>
+                        
+                        <div class="value-card group">
+                            <div class="w-14 h-14 bg-primary/20 flex items-center justify-center mb-4 pulse-glow transition-transform group-hover:scale-110">
+                                <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-lg text-white mb-2">24/7 Security Operations</h4>
+                            <p class="text-gray-400 text-sm">Round-the-clock monitoring and rapid threat response</p>
+                        </div>
+                        
+                        <div class="value-card group">
+                            <div class="w-14 h-14 bg-primary/20 flex items-center justify-center mb-4 pulse-glow transition-transform group-hover:scale-110">
+                                <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-lg text-white mb-2">Certified Professionals</h4>
+                            <p class="text-gray-400 text-sm">Team of industry-certified cybersecurity experts</p>
+                        </div>
                     </div>
                 </div>
             </div>
