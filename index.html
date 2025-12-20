@@ -418,34 +418,10 @@
 
     <!-- About Section -->
     <section id="about" class="py-12 bg-slate-900 relative overflow-hidden">
-        <!-- Animated background grid -->
-        <div class="absolute inset-0 opacity-10 pointer-events-none">
-            <div class="absolute top-0 left-0 w-full h-full" style="background-image: 
-                linear-gradient(90deg, rgba(14, 165, 233, 0.3) 1px, transparent 1px),
-                linear-gradient(rgba(14, 165, 233, 0.3) 1px, transparent 1px);
-                background-size: 60px 60px;
-                animation: gridMove 20s linear infinite;">
-            </div>
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgba(14, 165, 233, 0.3) 1px, transparent 0); background-size: 40px 40px;"></div>
         </div>
-        
-        <!-- Gradient overlays -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/10 to-transparent blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-cyan-500/10 to-transparent blur-3xl"></div>
-        
-        <!-- Floating shield decoration -->
-        <svg class="floating-shield" style="top: 10%; right: 5%; width: 250px; height: 250px; opacity: 0.3;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-        </svg>
-        
-        <!-- Floating lock decoration -->
-        <svg class="floating-shield" style="bottom: 10%; left: 5%; width: 180px; height: 180px; animation-delay: 2s; opacity: 0.3;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-        </svg>
-        
-        <!-- Cyber particles -->
-        <div class="cyber-particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
-        <div class="cyber-particle" style="top: 60%; right: 15%; animation-delay: 1.5s;"></div>
-        <div class="cyber-particle" style="bottom: 25%; left: 25%; animation-delay: 3s;"></div>
         
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-5xl mx-auto">
