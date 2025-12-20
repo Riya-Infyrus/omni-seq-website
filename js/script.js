@@ -37,7 +37,7 @@ function typeWriter(element, text, speed = 100) {
         } else {
             // Add blinking cursor after typing is done
             element.style.borderRight = '3px solid rgba(14, 165, 233, 0.8)';
-            element.style.paddingRight = '8px';
+            element.style.paddingRight = '4px';
             element.style.animation = 'blink 0.75s step-end infinite';
         }
     }
